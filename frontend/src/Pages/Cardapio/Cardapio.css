@@ -1,0 +1,43 @@
+.header-cardapio {
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(247, 247, 247, 0.26)
+    ),
+    url("../../images/parederoxa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 🔹 sombra leve abaixo do header */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.sub-header {
+  background-color: rgb(255, 255, 255);
+  height: 180px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.cardapio {
+  padding: 20px;
+}
+
+.div-cardapio {
+  width: 86%;
+  max-width: 1040px; /* limite p/ não espalhar demais */
+  margin: 0 auto 32px;
+  padding: 24px;
+  background: #fff; /* simples e limpo */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* sombra suave */
+  border: none;
+}
