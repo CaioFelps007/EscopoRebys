@@ -7,6 +7,9 @@ import photoperfil from "../../images/photoperfilrebys.jpg";
 //icons
 import { IoMenuSharp } from "react-icons/io5";
 
+//components
+import Itens from "../../components/ItemCardap/items";
+
 function Cardapio() {
   return (
     <main>
@@ -31,7 +34,9 @@ function Cardapio() {
           <button className="button-scroll"> Bebidas</button>
         </section>
 
-        <section className="cardapio">cardapio</section>
+        <section className="cardapio">
+          <Itens />
+        </section>
       </div>
     </main>
   );

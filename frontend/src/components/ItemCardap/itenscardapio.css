@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;600&display=swap");
+
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .container-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .container-card {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+.card-produto {
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* área da imagem: quadrada e sem vazar */
+.image-card {
+  width: 96px; /* tamanho da thumb */
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 auto; /* não estica */
+  background: #eee; /* fallback */
+}
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preenche sem distorcer */
+  display: block;
+}
+
+/* textos do card */
+.texts-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.texts-card h2 {
+  font-size: 1.4rem;
+  /* font-family: "Dancing Script", system-ui, sans-serif; */
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+}
+
+.texts-card p {
+  font-size: 0.7rem;
+  font-family: "Montserrat", system-ui, sans-serif;
+  line-height: 1.45;
+}
+
+.texts-card h4 {
+  font-size: 0.9rem;
+  font-family: "Montserrat", system-ui, sans-serif;
+  line-height: 1.45;
+}
+
+.item-cardapio h1 {
+  font-family: "Dancing Script", system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: 0.2px;
+  margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+  .card-produto {
+    width: 95%;
+  }
+  .texts-card h2 {
+    font-size: 1.2rem;
+  }
+  .texts-card p {
+    font-size: 0.6rem;
+  }
+  .texts-card h4 {
+    font-size: 0.9rem;
+  }
+}

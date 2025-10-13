@@ -1,36 +1,30 @@
 import React from "react";
 import "./itenscardapio.css";
 
-function Items() {
-  const itens = [
-    {
-      id: 1,
-      photo: "image 1",
-      descript: "açai gostoso com calda de chocolate",
-      peso: "770ml",
-      preco: "R$19,90",
-    },
-    {
-      id: 2,
-      photo: "image 1",
-      descript: "açai gostoso com calda de chocolate",
-      peso: "770ml",
-      preco: "R$19,90",
-    },
-    {
-      id: 3,
-      photo: "image 1",
-      descript: "açai gostoso com calda de chocolate",
-      peso: "770ml",
-      preco: "R$19,90",
-    },
-  ];
-
+export function ItemsCard({ photo, descript, peso, preco }) {
   return (
-    <div className="iten-cardapio">
-      <div className="container-card"></div>
-    </div>
+    <article className="card-produto">
+      <div className="image-card">
+        <img src={photo} />
+      </div>
+      <div className="texts-card">
+        <h2>{peso}</h2>
+        <p>{descript}</p>
+        <h4>{preco}</h4>
+      </div>
+    </article>
   );
 }
 
-export default Items;
+export function ItemsSection({ title, itens }) {
+  return (
+    <div className="item-cardapio">
+      <h1>{title}</h1>
+      <div className="container-card">
+        {itens.map((item) => (
+          <ItemsCard key={item.id} {...item} />
+        ))}
+      </div>
+    </div>
+  );
+}
