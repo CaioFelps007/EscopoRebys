@@ -3,7 +3,7 @@ import "./itenscardapio.css";
 
 export function ItemsCard({ photo, descript, peso, preco }) {
   return (
-    <article className="card-produto">
+    <button className="card-produto">
       <div className="image-card">
         <img src={photo} />
       </div>
@@ -12,7 +12,7 @@ export function ItemsCard({ photo, descript, peso, preco }) {
         <p>{descript}</p>
         <h4>{preco}</h4>
       </div>
-    </article>
+    </button>
   );
 }
 
